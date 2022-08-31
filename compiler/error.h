@@ -6,6 +6,6 @@
 void cerror(string error){
     std::cout << termcolor::red << error;
     cout<< termcolor::reset;
-    exit()
+    exit(EXIT_FAILURE);
 }
 #endif
