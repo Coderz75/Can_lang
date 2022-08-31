@@ -1,5 +1,4 @@
 #include <iostream>
-#include "processor.h"
 #include <fstream>
 #include "error.h"
 
@@ -15,6 +14,12 @@ void Verifyinputs(int argc){
 }
 
 
+int process(){
+  //and another function : )
+  checkError(file);
+  return 0;
+}
+
 int main(int argc, char** argv){
   //verify inputs were given
   Verifyinputs(argc);
@@ -23,8 +28,7 @@ int main(int argc, char** argv){
   line = new string;
   //make sure file exists
   ifstream f(argv[1]);
-
-  if (f.is_open())
+  if (f)
   {
     while ( getline (f,*line) )
     {
@@ -34,4 +38,6 @@ int main(int argc, char** argv){
   }else cerror("Unable to open file \nTips: \n\tMake sure the file exists \n\tMake sure you have enough memory");
   delete line;
   //Done reading, now time to process
+  //With a function lol
+  process();
 }

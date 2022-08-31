@@ -1,3 +1,6 @@
+#ifndef PROCESSOR_H
+#define PROCESSOR_H
+
 #include "slackerz/default.h"
 #include <fstream>
 using namespace std;
@@ -17,7 +20,8 @@ std::vector<std::string> dataof(string x){
   }
   string line = sline;
   result.push_back(line);// add pure line (no tabs and spaces at the start)
-  //check if it is an import
+
+  //check type
   if(sline.startswith("import")){
     result.push_back("import");
     //now collecting number of args
@@ -25,6 +29,11 @@ std::vector<std::string> dataof(string x){
     result.push_back(to_string(args.size()));
     //now appending all args
     result.insert(std::end(result), std::begin(args), std::end(args));
-  }
+  }else if(sline.startswith("//")){
+    result.push_back("Comment");
+  }else if(line == ""){
+    result.push_back("Empty");
+  }else result.push_back("unknown");
   return result;
 }
+#endif
