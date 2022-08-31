@@ -1,6 +1,8 @@
-# Cheetah
+# CAN_LANG
 
-Cheetah is a currently in development coding language, using c++ as it's base
+CAN, a language that can
+
+Can is a currently in development coding language, using c++ as it's base.
 
 As it is in an early stage of development, nothing will work as expected.
 
