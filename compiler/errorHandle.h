@@ -5,7 +5,7 @@
 #include "slackerz/default.h"
 
 void cerror(int line, string error, string faultline,string tips = ""){
-    std::cout << termcolor::red << "ERROR: On line: " + to_string(line) + "\n\n" << faultline<<"\n\nThe error follows: \n"<<error << termcolor::green<<"\nTips:\n\t" << tips << termcolor::red<< "\nCompilation Terminated";
+    std::cout << termcolor::red << "ERROR: On line: " + to_string(line) + "\n\n"<<termcolor::underline << faultline<<termcolor::reset<<termcolor::red<<"\n\n"<<error << termcolor::green<<"\n\nTips:\n\t" << tips << termcolor::red<< "\nCompilation Terminated";
     cout<< termcolor::reset;
     exit(EXIT_FAILURE);
 }
