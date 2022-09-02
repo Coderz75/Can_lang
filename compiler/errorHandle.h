@@ -15,4 +15,13 @@ void cerror(string error){
     cout << termcolor::reset;
     exit(EXIT_FAILURE);
 }
+
+void warn(string warnmsg){
+    cout << termcolor::yellow << "WARNING: " << warnmsg <<"\n"<< termcolor::reset;
+}
+
+void warn(int line, string warnmsg){
+    cout << termcolor::yellow << "WARNING [line: "<<tostring(line)<< "]: " << warnmsg <<"\n"<< termcolor::reset;
+}
+
 #endif

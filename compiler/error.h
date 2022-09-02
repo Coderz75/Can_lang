@@ -19,7 +19,7 @@ void checkError(vector<string> file){
         }
         checks c;
         //check
-        if(type == "import") c.import(data,i);
+        if(type == "import") c.import(data,i+1);
 
     }
 }

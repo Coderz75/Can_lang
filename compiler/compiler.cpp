@@ -1,8 +1,10 @@
 #include <iostream>
 #include <fstream>
 #include "error.h"
+#include "global.h"
 
 vector<string> file;
+vector<string> apis = {"api","files"};
 
 void Verifyinputs(int argc){
   if(argc > 2){
